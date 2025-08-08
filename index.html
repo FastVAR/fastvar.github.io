@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+        content="FastVAR: Linear Visual Autoregressive Modeling via Cached Token Pruning">
+  <meta name="keywords" content="Image Generation, Visual Autoregressive, Token Pruning">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>FastVAR: Linear Visual Autoregressive Modeling via Cached Token Pruning</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -32,7 +32,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="icon" href="./static/images/favicon.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -50,77 +50,56 @@
       <span aria-hidden="true"></span>
     </a>
   </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
 </nav>
 
 
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
+      <!-- LOGO  -->
+      <div class="has-text-centered mb-4">
+        <img src="./static/images/logo2.jpg" alt="FastVAR Logo" style="width: 500px; height: auto; margin: 0 auto;">
+      </div>
+      <!--/ LOGO  -->
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <h1 class="title is-1 publication-title">Linear Visual Autoregressive Modeling via Cached Token Pruning</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
+              <a href="https://csguoh.github.io/">Hang Guo</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+              <a href="https://yaweili.bitbucket.io/">Yawei Li</a><sup>2</sup>,</span>
             <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
+              <a href="https://github.com/taolinzhang">Taolin Zhang</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
+              <a href="https://scholar.google.com.hk/citations?user=HoKoCv0AAAAJ&hl=zh-CN&oi=ao">Jiangshan Wang</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
+              <a href="https://scholar.google.com.hk/citations?user=MqJNdaAAAAAJ&hl=zh-CN&oi=ao">Tao Dai</a><sup>3</sup>,
             </span>
             <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
+              <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=koAXTXgAAAAJ">Shu-Tao Xia</a><sup>1,4</sup>,
             </span>
             <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+              <a href="https://ee.ethz.ch/the-department/people-a-z/person-detail.luca-benini.html">Luca Benini</a><sup>2</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <span class="author-block"><sup>1</sup>Tsinghua University,</span>
+            <span class="author-block"><sup>2</sup>ETH Zurich</span>
+            <span class="author-block"><sup>3</sup>Shenzhen University</span>
+            <span class="author-block"><sup>4</sup>Peng Cheng Laboratory</span>
           </div>
+          <!-- ICCV 2025 Red Title -->
+           <p class="has-text-danger has-text-weight-bold is-size-4 mt-3">ICCV 2025</p>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
+                <a href="https://arxiv.org/pdf/2503.23367"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -129,7 +108,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
+                <a href="https://arxiv.org/pdf/2503.23367"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -137,19 +116,9 @@
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Video Link. -->
-              <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="https://github.com/csguoh/FastVAR"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -157,15 +126,16 @@
                   <span>Code</span>
                   </a>
               </span>
-              <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                <a href="https://huggingface.co/papers/2503.23367"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="far fa-images"></i>
+                    <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg"
+                         alt="Hugging Face" style="height: 1em; vertical-align: middle;">
                   </span>
-                  <span>Data</span>
-                  </a>
+                  <span>Hugging Face</span>
+                </a>
+              </span>
             </div>
 
           </div>
@@ -175,79 +145,21 @@
   </div>
 </section>
 
+
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
+      <img src="./static/images/teaser.jpg" alt="Teaser Image" style="width: 100%; height: auto;">
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
+      FastVAR enables 2K resolution image generation with on single 3090 GPU.
       </h2>
     </div>
   </div>
 </section>
 
 
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
+
 
 
 <section class="section">
@@ -255,36 +167,29 @@
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
-          </p>
+        
+        <!-- Highlighted Abstract Container -->
+        <div class="box" 
+             style="
+               background-color: #f5f5f5; 
+               border-radius: 8px; 
+               box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+             ">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Visual Autoregressive (VAR) modeling has gained popularity for its shift towards next-scale prediction. However, existing VAR paradigms process the entire token map at each scale step, leading to the complexity and runtime scaling dramatically with image resolution.
+            </p>
+            <p>
+              To address this challenge, we propose FastVAR, a post-training acceleration method for efficient resolution scaling with VARs. Our key finding is that the majority of latency arises from the large-scale step where most tokens have already converged. Leveraging this observation, we develop the cached token pruning strategy that only forwards pivotal tokens for scale-specific modeling while using cached tokens from previous scale steps to restore the pruned slots. This significantly reduces the number of forwarded tokens and improves the efficiency at larger resolutions.
+            </p>
+            <p>
+              Experiments show the proposed FastVAR can further speedup FlashAttention-accelerated VAR by 2.7x with negligible performance drop of less than 1%. We further extend FastVAR to zero-shot generation of higher resolution images. In particular, FastVAR can generate one 2K image with 15 GB memory footprints in 1.5 s on a single NVIDIA 3090 GPU.
+            </p>
+          </div>
         </div>
+        <!--/ Highlighted Abstract Container -->
+
       </div>
     </div>
     <!--/ Abstract. -->
@@ -292,163 +197,202 @@
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
+        <figure class="image is-3by2">
+          <img src="./static/videos/pipeline.gif" alt="FastVAR Pipeline">
+        </figure>
+
+        <p class="subtitle is-5 mt-4" style="max-width: 700px; margin: 0 auto; font-size: 1rem;">
+          <strong>FastVAR</strong> introduces the <em>"cached token pruning"</em> which is <strong>training-free</strong> and <strong>generic</strong> for various VAR backbones.
+        </p>
       </div>
     </div>
-    <!--/ Paper video. -->
   </div>
 </section>
 
 
 <section class="section">
   <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <!--/ Matting. -->
-
     <!-- Animation. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
+        <h2 class="title is-3">Highlights</h2>
+        
+        <!-- Block 1 -->
+        <h3 class="title is-4 mt-6">1️⃣ Faster VAR Generation without Perceptual Loss</h3>
+        <figure class="image mt-3 mb-6 is-flex is-justify-content-center">
+          <img src="./static/images/visual.jpg" alt="Faster VAR Generation"
+               style="max-width: 1200px; width: 100%; height: auto;">
+        </figure>
 
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
-        <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div>
-        <br/>
-        <!--/ Interpolating. -->
+        <!-- Block 2 -->
+        <h3 class="title is-4 mt-6">2️⃣ High-resolution Image Generation (even 2K image on single 3090 GPU)</h3>
+        <figure class="image mt-3 mb-6 is-flex is-justify-content-center">
+          <img src="./static/images/high_resolution.jpg" alt="High-resolution"
+               style="max-width: 900px; width: 100%; height: auto;">
+        </figure>
 
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
+        <!-- Block 3 -->
+        <h3 class="title is-4 mt-6">3️⃣ Promising Resolution Scalibility (almost linear complexity)</h3>
+        <figure class="image mt-3 mb-6 is-flex is-justify-content-center">
+          <img src="./static/images/efficiency.jpg" alt="Efficiency"
+               style="max-width: 1200px; width: 100%; height: auto;">
+        </figure>
 
       </div>
     </div>
-    <!--/ Animation. -->
-
-
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Concurrent Work. -->
-
   </div>
 </section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Observation</h2>
+        <p class="is-size-5 mb-4">
+          FastVAR is developed based on the three interesting findings with pre-trained VAR models:
+        </p>
+        <ol class="is-size-5 pl-5">
+          <li class="mb-2"><strong>Large-scale steps are speed bottleneck but appear robustness.</strong></li>
+          <li class="mb-2"><strong>High-frequency modeling matters at large-scale steps.</strong></li>
+          <li class="mb-2"><strong>Tokens from different scales are related.</strong></li>
+        </ol>
+
+        <p class="is-size-5">
+          More illustrations can be seen in our paper.
+        </p>
+
+        <figure class="image mt-3 mb-6 is-flex is-justify-content-center">
+          <img src="./static/images/motivation.jpg" alt="Faster VAR Generation"
+               style="max-width: 1300px; width: 100%; height: auto;">
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Algorithm</h2>
+        <figure class="image mt-3 mb-6 is-flex is-justify-content-center">
+          <img src="./static/images/algo.jpg" alt="Faster VAR Generation"
+               style="max-width: 1200px; width: 100%; height: auto;">
+        </figure>   
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Performance</h2>
+        <p class="is-size-5">
+          Our FastVAR can achieve  <strong>2.7x</strong> speedup with  <strong>less than 1%</strong> performance drop, even on top of <strong>Flash-attention</strong> accelerated setups.Detailed results can be found in the paper.
+        </p>
+        <figure class="image mt-3 mb-6 is-flex is-justify-content-center">
+          <img src="./static/images/results.jpg" alt="Faster VAR Generation"
+               style="max-width: 1200px; width: 100%; height: auto;">
+        </figure>   
+        <figure class="image mt-3 mb-6 is-flex is-justify-content-center">
+          <img src="./static/images/flash_attn.jpg" alt="Faster VAR Generation"
+               style="max-width: 1200px; width: 70%; height: auto;">
+        </figure>  
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Analysis</h2>
+        <p class="is-size-5">
+        Our FastVAR is robust under even extrame pruning ratios.
+        </p>
+        <figure class="image mt-3 mb-6 is-flex is-flex-direction-column is-align-items-center" style="width: 70%; margin: 0 auto;">
+          <img
+            src="./static/videos/ratio_img.gif"
+            alt="FastVAR Ratio"
+            style="max-width: 100%; height: auto;"
+          >
+          <figcaption class="has-text-centered is-size-6 mt-2">
+          Images generated under different pruning ratios.
+          </figcaption>
+        </figure>
+
+        <p class="is-size-5">
+        Without any training, our FastVAR can find meaningful pruning strategies.
+        </p>
+        <figure class="image mt-3 mb-6 is-flex is-flex-direction-column is-align-items-center" style="width: 70%; margin: 0 auto;">
+          <img
+            src="./static/videos/mask_viz.gif"
+            alt="FastVAR Ratio"
+            style="max-width: 100%; height: auto;"
+          >
+          <figcaption class="has-text-centered is-size-6 mt-2">
+          Pruned tokens under different pruning ratios.
+          </figcaption>
+        </figure>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">More Results</h2>
+        <figure class="image mt-3 mb-6 is-flex is-justify-content-center">
+          <img src="./static/images/more1.jpg" alt="Faster VAR Generation"
+               style="max-width: 1000px; width: 100%; height: auto;">
+        </figure>   
+        <figure class="image mt-3 mb-6 is-flex is-justify-content-center">
+          <img src="./static/images/more2.jpg" alt="Faster VAR Generation"
+               style="max-width: 870px; width: 100%; height: auto;">
+        </figure>  
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+    <pre><code>@article{guo2025fastvar,
+    title={FastVAR: Linear Visual Autoregressive Modeling via Cached Token Pruning},
+    author={Guo, Hang and Li, Yawei and Zhang, Taolin and Wang, Jiangshan and Dai, Tao and Xia, Shu-Tao and Benini, Luca},
+    journal={arXiv preprint arXiv:2503.23367},
+    year={2025}
 }</code></pre>
   </div>
 </section>
@@ -458,10 +402,10 @@
   <div class="container">
     <div class="content has-text-centered">
       <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
+         href="https://arxiv.org/pdf/2503.23367">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      <a class="icon-link" href="https://github.com/csguoh/FastVAR" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
     </div>
@@ -477,8 +421,6 @@
             This means you are free to borrow the <a
               href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
             we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
           </p>
         </div>
       </div>
